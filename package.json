@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^5.3.0",
+    "nuxt": "3.0.0-rc.6"
+  },
+  "dependencies": {
+    "daisyui": "^2.19.1",
+    "firebase": "^9.9.0",
+    "firebase-admin": "^11.0.0"
+  }
+}
