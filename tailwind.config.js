@@ -19,6 +19,6 @@ module.exports = {
     ],
   },
   content: ["./{pages,components,layouts,plugins}/**/*.{vue,js,ts}", "app.vue"],
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   //...
 };

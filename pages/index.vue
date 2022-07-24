@@ -1,3 +1,7 @@
 <template>
-  <button class="btn btn-secondary">Button2</button>
+  <div class="h2">{{ user }}</div>
 </template>
+
+<script setup>
+const user = useUser();
+</script>

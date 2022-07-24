@@ -19,9 +19,8 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   if (!apps.length) {
     firebaseApp = initializeApp(firebaseConfig);
-    console.log("Firebase Not Initialized");
   } else {
     firebaseApp = apps[0];
-    console.log("Firebase Initialized");
+    getUser();
   }
 });
