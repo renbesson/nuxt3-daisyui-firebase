@@ -12,7 +12,7 @@
         <!--card content -->
         <div class="mb-3">
           <label class="label">
-            <span class="label-text">What is your username?</span>
+            <span class="label-text font-semibold">New Username</span>
           </label>
           <input
             v-model="username"
@@ -23,7 +23,7 @@
         </div>
         <div class="mb-3">
           <label class="label">
-            <span class="label-text">What is your email address?</span>
+            <span class="label-text font-semibold">New Email Address</span>
           </label>
           <input
             v-model="email"
@@ -53,7 +53,7 @@
     >
       <div class="card-body">
         <h2 class="card-title">Not Signed In</h2>
-        <p>You are NOT signed in.</p>
+        <span class="">You are NOT signed in.</span>
         <div class="card-actions justify-between">
           <NuxtLink to="/signin"
             ><button class="btn btn-primary">SignIn</button></NuxtLink

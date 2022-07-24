@@ -12,7 +12,7 @@
         <!--card content -->
         <div class="mb-3">
           <label class="label">
-            <span class="label-text">What is your email address?</span>
+            <span class="label-text font-semibold">Email Address</span>
           </label>
           <input
             v-model="email"
@@ -23,7 +23,7 @@
         </div>
         <div>
           <label class="label">
-            <span class="label-text">What is your password?</span>
+            <span class="label-text font-semibold">Password</span>
           </label>
           <input
             v-model="password"
@@ -46,11 +46,11 @@
 
     <div
       v-if="user?.isLoading === false && user?.user !== null"
-      class="card w-96 bg-base-200 mx-auto m-5 shadow-xl"
+      class="card w-96 bg-base-100 mx-auto m-5 shadow-xl"
     >
       <div class="card-body">
         <h2 class="card-title">Already Signed In</h2>
-        <p>You are already signed in. Click OK to go to the home page.</p>
+        <span>You are already signed in. Click OK to go to the home page.</span>
         <div class="card-actions justify-end">
           <NuxtLink to="/"
             ><button class="btn btn-primary">Ok</button></NuxtLink
