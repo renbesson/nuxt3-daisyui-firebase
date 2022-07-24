@@ -72,21 +72,25 @@ export const updateUser = async (userObj) => {
   const auth = getAuth();
   const { username, email } = userObj;
 
-  if (username) {
+  if (username && username !== auth.currentUser.displayName) {
     try {
       await updateProfile(auth.currentUser, { displayName: username });
       alert("Username updated!");
     } catch (e) {
       alert(`Error updating username: ${e.message}`);
     }
+  } else {
+    alert("Please type a valid username and different from the current one.");
   }
-  if (email) {
+  if (email && email !== auth.currentUser.email) {
     try {
       await updateEmail(auth.currentUser, email);
       alert("Email updated!");
     } catch (e) {
       alert(`Error updating email: ${e.message}`);
     }
+  } else {
+    alert("Please type a valid email and different from the current one.");
   }
   await getUser();
 };
