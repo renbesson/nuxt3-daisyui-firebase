@@ -32,24 +32,16 @@
             class="input input-bordered input-primary w-full max-w-xs"
           />
         </div>
-        <div class="mb-3">
-          <label class="label">
-            <span class="label-text">What is your password?</span>
-          </label>
-          <input
-            v-model="password"
-            type="password"
-            placeholder="Password"
-            class="input input-bordered input-primary w-full max-w-xs"
-          />
-        </div>
         <!--card buttons -->
         <div class="card-actions justify-between mt-5">
           <button
             class="btn btn-primary"
-            @click="updateUser({ username, email, password })"
+            @click="updateUser({ username, email })"
           >
             Update
+          </button>
+          <button @click="resetPassword(email)" class="btn btn-secondary">
+            Reset Password
           </button>
         </div>
       </div>
@@ -72,14 +64,11 @@
         </div>
       </div>
     </div>
-    <p>{{ user?.user?.displayName }}</p>
   </div>
 </template>
 
 <script setup>
 const user = useUser();
-console.log(user?.value);
 const username = ref("");
 const email = ref("");
-const password = ref("");
 </script>

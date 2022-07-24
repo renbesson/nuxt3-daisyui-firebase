@@ -51,11 +51,9 @@
         </ul>
       </div>
     </div>
-    <h3>{{ user?.user?.displayName }}</h3>
   </div>
 </template>
 
 <script setup>
 const user = useUser();
-console.log(user?.value);
 </script>
