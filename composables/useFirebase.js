@@ -35,28 +35,6 @@ export const signInUser = async (email, password) => {
   }
 };
 
-export const getUser = async () => {
-  const auth = getAuth();
-  const user = useUser();
-
-  user.value.isLoading = true;
-  try {
-    await onAuthStateChanged(auth, (userData) => {
-      if (userData) {
-        //if signed in
-        user.value.user = userData;
-      } else {
-        //if signed out
-        user.value.user = null;
-      }
-      user.value.isLoading = false;
-    });
-  } catch (e) {
-    user.value.error = e;
-    user.value.isLoading = false;
-  }
-};
-
 export const signOutUser = async () => {
   const auth = getAuth();
 
@@ -92,7 +70,6 @@ export const updateUser = async (userObj) => {
   } else {
     alert("Please type a valid email and different from the current one.");
   }
-  await getUser();
 };
 
 export const resetPassword = async () => {
