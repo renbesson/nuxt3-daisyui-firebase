@@ -1,11 +1,21 @@
 <template>
   <div class="navbar bg-base-300">
     <div class="flex-1">
-      <NuxtLink to="/"
-        ><a class="btn btn-ghost normal-case text-xl"
-          >Nuxt3 + daisyUI</a
-        ></NuxtLink
-      >
+      <ul class="menu menu-horizontal bg-base-300 rounded-box">
+        <li>
+          <NuxtLink to="/"><a class="font-bold">Nuxt3 + daisyUI</a> </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/firestore"
+            ><a class="font-semibold">Firestore</a>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/storage"
+            ><a class="font-semibold">Storage</a>
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
     <div class="flex-none gap-2">
       <div class="form-control">
