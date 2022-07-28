@@ -11,7 +11,7 @@
   <img src="https://firebasestorage.googleapis.com/v0/b/tracking-tool-777.appspot.com/o/assets%2Ffirebase.png?alt=media&token=36a6b287-602f-459a-b657-cdaefc8854e6">
 </a>
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Go to the [Nuxt 3](https://nuxtjs.org/docs/get-started/installation), [daisyUI](https://daisyui.com/docs/install/), and [Firebase](https://firebase.google.com/docs) documentation to learn more.
 
 ## Install
 
@@ -25,6 +25,27 @@ or
 
 # npm
 npm install
+```
+
+## Create Firebase Project
+
+Create a firebase project at [Firebase Console](https://console.firebase.google.com/).
+
+After the project is created, on firebase console, go to **Project settings** (gear icon on the top left).
+
+Go to **Your apps** and create a web app.
+
+After created, you should see a block of code with your firebase configuration (apiKey, authDomain, etc).
+
+Create a `.env` file on the root directory of the project and add your config as the example below:
+
+```javascript
+FIREBASE_API_KEY='AIzaSyD6XHKJz_4OUE3MjBSyUjcfTrAh5uBPt4U'
+FIREBASE_AUTH_DOMAIN="tracking-tool-777.firebaseapp.com"
+FIREBASE_PROJECT_ID="tracking-tool-777"
+FIREBASE_STORAGE_BUCKET="tracking-tool-777.appspot.com"
+FIREBASE_MESSAGING_SENDER_ID="621011100680"
+FIREBASE_APP_ID="1:621011100680:web:21dd6f2c1504c4b4b61dbd"
 ```
 
 ## Development Server
