@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto h-full">
-    <div class="card w-full bg-base-200 mx-auto m-5 shadow-xl h-full">
+    <div class="card w-full bg-base-200 mx-auto lg:m-5 shadow-xl h-full">
       <AppNavbar />
       <NuxtPage />
       <AppFooter />

@@ -36,12 +36,20 @@
           class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 mt-3 p-2 shadow"
         >
           <li>
-            <NuxtLink to="/profile"
+            <NuxtLink to="/profile" onclick="document.activeElement.blur()"
               ><a class="justify-between">Profile</a></NuxtLink
             >
           </li>
-          <li><a>Settings</a></li>
-          <li><a @click="signOutUser">Logout</a></li>
+          <li>
+            <NuxtLink to="/settings" onclick="document.activeElement.blur()"
+              ><a>Settings</a></NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink to="/" onclick="document.activeElement.blur()"
+              ><a @click="signOutUser">Logout</a></NuxtLink
+            >
+          </li>
         </ul>
         <ul
           v-else
@@ -49,12 +57,12 @@
           class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 mt-3 p-2 shadow"
         >
           <li>
-            <NuxtLink to="/signin"
+            <NuxtLink to="/signin" onclick="document.activeElement.blur()"
               ><a class="justify-between">SignIn</a></NuxtLink
             >
           </li>
           <li>
-            <NuxtLink to="/signup"
+            <NuxtLink to="/signup" onclick="document.activeElement.blur()"
               ><a class="justify-between">SignUp</a></NuxtLink
             >
           </li>

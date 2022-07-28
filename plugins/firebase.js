@@ -1,6 +1,7 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore"
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
@@ -8,7 +9,8 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   let firebaseApp;
   let firebaseAuth;
-  let firestore;
+  let firestoreDb;
+  let fireStorage;
 
   const firebaseConfig = {
     apiKey: config.FIREBASE_API_KEY,
@@ -24,11 +26,14 @@ export default defineNuxtPlugin((nuxtApp) => {
     try {
       firebaseApp = initializeApp(firebaseConfig);
       firebaseAuth = getAuth(firebaseApp);
-      firestore = getFirestore(firebaseApp);
+      firestoreDb = getFirestore(firebaseApp);
+      fireStorage = getStorage(firebaseApp);
       return {
         provide: {
           firebaseApp,
           firebaseAuth,
+          firestoreDb,
+          fireStorage,
         },
       };
     } catch (e) {

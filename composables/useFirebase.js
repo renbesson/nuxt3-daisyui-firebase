@@ -7,6 +7,7 @@ import {
   updateEmail,
   sendPasswordResetEmail,
 } from "firebase/auth";
+import { collection, getDocs, onSnapshot } from "firebase/firestore";
 
 export const createUser = async (email, password, displayName) => {
   const auth = getAuth();
