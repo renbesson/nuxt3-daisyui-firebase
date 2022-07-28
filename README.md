@@ -13,6 +13,8 @@
 
 Go to the [Nuxt 3](https://nuxtjs.org/docs/get-started/installation), [daisyUI](https://daisyui.com/docs/install/), and [Firebase](https://firebase.google.com/docs) documentation to learn more.
 
+**Please, keep in mind this is configured to be a static website (non-SSR), thus no server auth and Firebase Clould Functions is needed.**
+
 ## Install
 
 Make sure to install the dependencies:
