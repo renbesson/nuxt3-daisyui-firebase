@@ -1,4 +1,4 @@
-# Nuxt 3 + DaisyUI + Firebase Boilerplate
+# (Unofficial) Nuxt 3 + DaisyUI + Firebase Boilerplate
 
 
 <a href="https://nuxtjs.org">
@@ -13,7 +13,7 @@
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-## Setup
+## Install
 
 Make sure to install the dependencies:
 
@@ -37,92 +37,77 @@ npm run dev
 
 ## Production
 
-Build the application for production:
-
-```bash
-npm run build
+Initialize firebase-tools
+```
+firebase login
+firebase init
 ```
 
-Locally preview production build:
-
-```bash
-npm run preview
+Type Y for yes.
+```
+Are you ready to proceed? (Y/n) Y
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+Select Firestore, Hosting, and Storage.
+```
+Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+ ( ) Remote Config: Configure a template file for Remote Config
+ ( ) Realtime Database: Configure a security rules file for Realtime Database and (optionally) provision default instance
+ (*) Firestore: Configure security rules and indexes files for Firestore
+ ( ) Functions: Configure a Cloud Functions directory and its files
+ (*) Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+ ( ) Hosting: Set up GitHub Action deploys
+ (*) Storage: Configure a security rules file for Cloud Storage
+```
 
--
+Press Enter and choose no if asks you to overwrite the existing file.
+```
+What file should be used for Firestore Rules? (firestore.rules)
+```
 
-Nuxt + Markdown blog starter
-This is not an official project. It's made by Marina Aísa and you can contribute submitting a pull-request.
+Press Enter and choose no if asks you to overwrite the existing file.
+```
+What file should be used for Firestore indexes? (firestore.indexes.json)
+```
 
-⚡️ Live
-Check it live
+This step is important to Hosting to work.
+```
+What do you want to use as your public directory? (public) .output/public
+```
 
-✨ Quick start
-Clone this repository.
+This step is also important to Hosting to work.
+```
+Configure as a single-page app (rewrite all urls to /index.html)? (y/N) N
+```
 
-git clone https://github.com/marinaaisa/nuxt-markdown-blog-starter.git
-Start developing.
+(Optional) I usually select No.
+```
+Set up automatic builds and deploys with GitHub? (y/N) N
+```
 
-Navigate into your new site’s directory and start it up.
+(Optional)
+```
+File .output/public/404.html already exists. Overwrite? (y/N) N
+```
 
-cd nuxt-markdown-blog-starter/
-npm install
-npm run dev
-Running!
+(Optional)
+```
+File .output/public/index.html already exists. Overwrite? (y/N) N
+```
 
-Your site is now running at http://localhost:3000!
+Press Enter and choose no if asks you to overwrite the existing file.
+```
+What file should be used for Storage Rules? (storage.rules)
+```
 
-🧐 What's inside?
-.
-├── node_modules
-├── assets
-├── components
-├── contents
-├── en
-├── blog
-├── blogsEn.js
-├── es
-├── blog
-├── blogsEs.js
-├── layouts
-├── locales
-├── pages
-├── plugins
-├── static
-├── .gitignore
-├── LICENSE
-├── nuxt.config.js
-├── package-lock.json
-├── package.json
-└── README.md
-/node_modules: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+(Almost) DONE!
 
-/assets: You will find the images and assets for the project. You can find more information at Nuxt's assets directory documentation
+You now need to generate the Nuxt static files.
+```
+npm run generate
+```
 
-/components: Vue components for the project. You can find more information at Nuxt's components directory documentation
-
-/contents: You will save your MD files here. They are divided by language and you will have to write the URL name of each of them at blogsEn.js and blogsEs.js.
-
-/layouts: You can find information at Nuxt's layout directory documentation
-
-/locales: You will save your translations here.
-
-/pages: You can find information at Nuxt's pages directory documentation
-
-/plugins: You can find information at Nuxt's plugins directory documentation
-
-/statics: You can find information at Nuxt's statics directory documentation
-
-.gitignore: This file tells git which files it should not track / not maintain a version history for.
-
-LICENSE: This is licensed under the MIT license.
-
-nuxt-config.js: This is the main configuration file for a Nuxt site. This is where you can specify information about your site (metadata) like the site title and description, which Nuxt plugins you’d like to include, etc. (Check out the config docs for more detail).
-
-package-lock.json (See package.json below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-
-package.json: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-README.md: A text file containing useful reference information about your project.
+And deploy everything to firebase.
+```
+firebase deploy
+```
