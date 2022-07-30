@@ -42,12 +42,12 @@ After created, you should see a block of code with your firebase configuration (
 Create a `.env` file on the root directory of the project and add your config as the example below:
 
 ```javascript
-FIREBASE_API_KEY='AIzaSyD6XHKJz_4OUE3MjBSyUjcfTrAh5uBPt4U'
-FIREBASE_AUTH_DOMAIN="tracking-tool-777.firebaseapp.com"
-FIREBASE_PROJECT_ID="tracking-tool-777"
-FIREBASE_STORAGE_BUCKET="tracking-tool-777.appspot.com"
-FIREBASE_MESSAGING_SENDER_ID="621011100680"
-FIREBASE_APP_ID="1:621011100680:web:21dd6f2c1504c4b4b61dbd"
+FIREBASE_API_KEY='XXxxxxxxXXXXxxxxXXXXXXxxxxXXXXXXxxxx'
+FIREBASE_AUTH_DOMAIN="XXXXXXXXXXXX.firebaseapp.com"
+FIREBASE_PROJECT_ID="XXXXXXXXXXXXX"
+FIREBASE_STORAGE_BUCKET="XXXXXXXXXXXXX.appspot.com"
+FIREBASE_MESSAGING_SENDER_ID="00000000000"
+FIREBASE_APP_ID="1:000000000000:web:XXXxxxxxxXXXXXxxxXXXxx"
 ```
 
 ## Development Server
