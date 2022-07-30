@@ -15,6 +15,9 @@ Go to the [Nuxt 3](https://nuxtjs.org/docs/get-started/installation), [daisyUI](
 
 **Please, keep in mind this is configured to be a static website (non-SSR), thus no server auth and Firebase Clould Functions is needed.**
 
+## Live Demo
+https://tracking-tool-777.firebaseapp.com/
+
 ## Install
 
 Make sure to install the dependencies:
