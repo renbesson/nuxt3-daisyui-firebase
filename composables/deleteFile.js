@@ -1,7 +1,7 @@
 import { ref, deleteObject } from "firebase/storage";
 import { doc, deleteDoc } from "@firebase/firestore";
 
-export default async function (fullPath, id) {
+export default async function (fullPath) {
   // Delete the image from firestorage
   const { $fireStorage, $firestoreDb } = useNuxtApp();
   const storageRef = ref($fireStorage, fullPath);

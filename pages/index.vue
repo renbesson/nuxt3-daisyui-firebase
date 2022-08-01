@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-const user = useUser();
+const { user } = useUser()?.value;
 </script>

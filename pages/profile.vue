@@ -1,11 +1,6 @@
 <template>
   <div>
-    <Spinner v-if="user?.isLoading === true" />
-
-    <div
-      v-if="user?.isLoading === false && user?.user !== null"
-      class="card w-96 bg-base-100 mx-auto m-5 shadow-xl"
-    >
+    <div v-if="user" class="card w-96 bg-base-100 mx-auto m-5 shadow-xl">
       <div class="card-body">
         <!--card title -->
         <h2 class="card-title">Profile</h2>
@@ -46,29 +41,12 @@
         </div>
       </div>
     </div>
-
-    <div
-      v-if="user?.isLoading === false && user?.user === null"
-      class="card w-96 bg-base-100 mx-auto m-5 shadow-xl"
-    >
-      <div class="card-body">
-        <h2 class="card-title">Not Signed In</h2>
-        <span class="">You are NOT signed in.</span>
-        <div class="card-actions justify-between">
-          <NuxtLink to="/signin"
-            ><button class="btn btn-primary">SignIn</button></NuxtLink
-          >
-          <NuxtLink to="/signup"
-            ><button class="btn btn-secondary">SignUp</button></NuxtLink
-          >
-        </div>
-      </div>
-    </div>
+    <NoAuth v-else />
   </div>
 </template>
 
 <script setup>
-const user = useUser();
+const { user } = useUser()?.value;
 const username = ref("");
 const email = ref("");
 </script>

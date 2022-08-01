@@ -37,7 +37,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         },
       };
     } catch (e) {
-      console.log(`Failed to initialize Firebase: ${e.message}`);
+      alert(`Failed to initialize Firebase: ${e.message}`);
     }
   } else {
     firebaseApp = apps[0];
