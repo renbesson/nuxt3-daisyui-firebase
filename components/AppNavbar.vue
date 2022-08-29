@@ -27,7 +27,7 @@
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-12 rounded-full">
-            <img :src="user?.user?.photoURL || 'public/no_pic.jpg'" />
+            <img :src="user?.user?.photoURL || '/no_pic.jpg'" />
           </div>
         </label>
         <ul
