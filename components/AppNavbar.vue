@@ -26,14 +26,14 @@
       </article>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img src="https://placeimg.com/80/80/people" />
+          <div class="w-12 rounded-full">
+            <img :src="user?.user?.photoURL || 'public/no_pic.jpg'" />
           </div>
         </label>
         <ul
           v-if="user?.user"
           tabindex="0"
-          class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 mt-3 p-2 shadow"
+          class="menu menu-compact dropdown-content bg-base-100 rounded-box w-52 mt-3 p-2 shadow"
         >
           <li>
             <NuxtLink to="/profile" onclick="document.activeElement.blur()"
@@ -54,7 +54,7 @@
         <ul
           v-else
           tabindex="0"
-          class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 mt-3 p-2 shadow"
+          class="menu menu-compact dropdown-content bg-base-100 rounded-box w-52 mt-3 p-2 shadow"
         >
           <li>
             <NuxtLink to="/signin" onclick="document.activeElement.blur()"

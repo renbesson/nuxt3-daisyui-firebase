@@ -2,12 +2,10 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
   updateProfile,
   updateEmail,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
 
 export const createUser = async (email, password, displayName) => {
   const auth = getAuth();
@@ -47,29 +45,45 @@ export const signOutUser = async () => {
   }
 };
 
-export const updateUser = async (userObj) => {
+export const updateUserUsername = async (data) => {
   const auth = getAuth();
-  const { username, email } = userObj;
-
-  if (username && username !== auth.currentUser.displayName) {
-    try {
-      await updateProfile(auth.currentUser, { displayName: username });
+  try {
+    if (data !== auth.currentUser.displayName) {
+      await updateProfile(auth.currentUser, { displayName: data });
       alert("Username updated!");
-    } catch (e) {
-      alert(`Error updating username: ${e.message}`);
     }
-  } else {
-    alert("Please type a valid username and different from the current one.");
+  } catch (error) {
+    alert(
+      `Please submit a valid username and different from the current one. ${error.message}`
+    );
   }
-  if (email && email !== auth.currentUser.email) {
-    try {
-      await updateEmail(auth.currentUser, email);
+};
+
+export const updateUserEmail = async (data) => {
+  const auth = getAuth();
+  try {
+    if (data !== auth.currentUser.email) {
+      await updateEmail(auth.currentUser, data);
       alert("Email updated!");
-    } catch (e) {
-      alert(`Error updating email: ${e.message}`);
     }
-  } else {
-    alert("Please type a valid email and different from the current one.");
+  } catch (error) {
+    alert(
+      `Please submit a valid email and different from the current one. ${error.message}`
+    );
+  }
+};
+
+export const updateUserPhotoURL = async (data) => {
+  const auth = getAuth();
+  try {
+    if (data !== auth.currentUser.email) {
+      await updateProfile(auth.currentUser, { photoURL: data });
+      alert("Photo updated!");
+    }
+  } catch (error) {
+    alert(
+      `Please submit a valid photo and different from the current one. ${error.message}`
+    );
   }
 };
 

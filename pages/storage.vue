@@ -4,23 +4,13 @@
       <div
         class="card w-full max-w-3xl bg-base-100 mx-auto m-5 shadow-xl rounded-none lg:rounded-2xl"
       >
+        <!--+++card upload -->
         <div class="card-body">
-          <!--card content -->
-          <input
-            accept="image/*"
-            type="file"
-            id="selectFile"
-            ref="selectedFile"
-          />
-          <!--card buttons -->
-          <div class="card-actions justify-between">
-            <button @click="submitFile" class="btn btn-primary btn-block">
-              Submit
-            </button>
-          </div>
+          <UploadFile :path="`users/${user?.uid}/images`" />
         </div>
+        <!--***card upload -->
+        <!--+++ Images -->
         <div class="card-body">
-          <!--+++ Images -->
           <div class="columns-1 sm:columns-3 p-0">
             <div
               v-for="image in data"
@@ -37,8 +27,8 @@
               </figure>
             </div>
           </div>
-          <!--*** Images -->
         </div>
+        <!--*** Images -->
       </div>
     </div>
     <Spinner v-else />
@@ -49,12 +39,6 @@
 <script setup>
 const { user } = useUser()?.value;
 const { data, loading } = getCollection(`users/${user?.uid}/images`);
-
-const selectedFile = ref(null);
-
-const submitFile = async () => {
-  await addFile(`users/${user?.uid}/images`, selectedFile.value.files[0]);
-};
 
 const submitDelete = (fullPath) => {
   deleteFile(fullPath);

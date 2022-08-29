@@ -1,5 +1,5 @@
 import { uploadBytes, getDownloadURL, ref } from "firebase/storage";
-import { collection, addDoc, doc, setDoc } from "@firebase/firestore";
+import { doc, setDoc } from "@firebase/firestore";
 import { customAlphabet } from "nanoid";
 
 const nanoid = customAlphabet("0123456789abcdef", 6);

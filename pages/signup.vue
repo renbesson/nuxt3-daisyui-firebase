@@ -4,7 +4,7 @@
 
     <div
       v-if="user?.isLoading === false && user?.user === null"
-      class="card w-96 bg-base-200 mx-auto m-5 shadow-xl"
+      class="card w-96 bg-base-100 mx-auto m-5 shadow-xl"
     >
       <div class="card-body">
         <!--card title -->
