@@ -2,7 +2,7 @@
   <div v-if="user.isLoading === false" class="container mx-auto h-full">
     <div class="card w-full bg-base-200 mx-auto lg:m-5 shadow-xl h-full">
       <AppNavbar />
-      <NuxtPage :user="user.user" />
+      <NuxtPage :user="user.user" class="min-h-16" />
       <AppFooter />
     </div>
   </div>
