@@ -43,7 +43,7 @@
         </div>
         <!--card buttons -->
         <div class="card-actions justify-between">
-          <button @click="submitGame" class="btn btn-primary btn-block">
+          <button @click="submitDoc" class="btn btn-primary btn-block">
             Submit
           </button>
         </div>
@@ -60,11 +60,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(game, index) in data">
-                <td>{{ game.name }}</td>
-                <td>{{ game.type }}</td>
-                <td>{{ game.year }}</td>
-                <td @click="submitDelete(`users/${user.uid}/games/${game.id}`)">
+              <tr v-for="(doc, index) in data">
+                <td>{{ doc.name }}</td>
+                <td>{{ doc.type }}</td>
+                <td>{{ doc.year }}</td>
+                <td @click="submitDelete(`users/${user.uid}/docs/${doc.id}`)">
                   <button class="btn btn-error fill-base-100 btn-circle btn-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -97,10 +97,10 @@ const name = ref("");
 const type = ref("");
 const year = ref("");
 
-const { data, loading } = getCollection(`users/${user?.uid}/games`);
+const { data, loading } = getCollection(`users/${user?.uid}/docs`);
 
-const submitGame = () => {
-  addDocFirestore(`users/${user?.uid}/games`, {
+const submitDoc = () => {
+  addDocFirestore(`users/${user?.uid}/docs`, {
     name: name.value,
     type: type.value,
     year: year.value,

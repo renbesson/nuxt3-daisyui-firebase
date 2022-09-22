@@ -4,11 +4,11 @@ export default async function (docObj) {
   const { $firestoreDb } = useNuxtApp();
 
   try {
-    const addedDoc = await addDoc(collection($firestoreDb, "games"), {
+    const addedDoc = await addDoc(collection($firestoreDb, "docs"), {
       ...docObj,
     });
     await setDoc(
-      doc($firestoreDb, "games", addedDoc.id),
+      doc($firestoreDb, "docs", addedDoc.id),
       { id: addedDoc.id },
       { merge: true }
     );
