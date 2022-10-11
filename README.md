@@ -2,13 +2,13 @@
 
 
 <a href="https://nuxtjs.org">
-  <img src="https://firebasestorage.googleapis.com/v0/b/tracking-tool-777.appspot.com/o/assets%2Fnuxt.png?alt=media&token=6f34b34a-7d4e-41ce-a9c4-2733d31b8b2d">
+  <img src="https://firebasestorage.googleapis.com/v0/b/nuxt3-daisyui-firebase.appspot.com/o/nuxt.png?alt=media&token=172d2c80-bade-4ffc-bd7e-8c6c825d638a">
 </a>
 <a href="https://daisyui.com">
-  <img src="https://firebasestorage.googleapis.com/v0/b/tracking-tool-777.appspot.com/o/assets%2FdaisyUI.png?alt=media&token=453cf42f-9ff9-4a5c-9f28-3af49eefb854">
+  <img src="https://firebasestorage.googleapis.com/v0/b/nuxt3-daisyui-firebase.appspot.com/o/daisyUI.png?alt=media&token=ae9a8dd2-d247-4300-86fa-4e5acc2ecf48">
 </a>
 <a href="https://firebase.com">
-  <img src="https://firebasestorage.googleapis.com/v0/b/tracking-tool-777.appspot.com/o/assets%2Ffirebase.png?alt=media&token=36a6b287-602f-459a-b657-cdaefc8854e6">
+  <img src="https://firebasestorage.googleapis.com/v0/b/nuxt3-daisyui-firebase.appspot.com/o/firebase.png?alt=media&token=d738c74b-7441-4c25-b91d-ed3603fa98a8">
 </a>
 
 Go to the [Nuxt 3](https://nuxtjs.org/docs/get-started/installation), [daisyUI](https://daisyui.com/docs/install/), and [Firebase](https://firebase.google.com/docs) documentation to learn more.
